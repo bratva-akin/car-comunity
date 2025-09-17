@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>Abuja Car culture</title>
+  </head>
+  <body>
+    <header>
+      <nav class="p-3 bg-gray-950 md:flex md:items-center md:justify-between">
+        <div class="flex justify-between items-center">
+          <span class="cursor-pointer"
+            ><img src="/img/LL.png" class="w-30 h-15" alt="" />
+          </span>
+          <span class="text-3xl md:hidden text-neutral-100 cursor-pointer">
+             <i class="fa-solid fa-bars text-3xl md:hidden text-neutral-100 cursor-pointer mb-4" onclick="sidebar(this)"></i>
+            <!-- <i
+              class="fa-solid fa-bars mb-4"
+              name="menu-outline"
+              onclick="sidebar(this)"
+            ></i> -->
+          </span>
+        </div>
+
+        <ul
+          class="md:flex text-white md:items-center md:gap-1 z-999 md:z-auto md:static absolute w-full right-0 md:w-auto md:opacity-100 opacity-10 top-[-400px] transition-all-ease-in duration-600 md:py-0 py-4 md:pl-0 pl-7 backdrop-blur text-center"
+        >
+          <!-- class="md:flex md:items-center md:gap-2 z-20 md:static absolute w-full
+          left-0 md:w-auto md:opacity-100 opacity-100 top-0 transition-all
+          ease-in duration-600 md:py-0 py-4 md:pl-0 pl-7 bg-white/80
+          backdrop-blur-md shadow-md text-center" -->
+
+          <li class="mx-2 my-4 md:my-0">
+            <a
+              href="index.html"
+              class="text-xl hover:text-neutral-100 hover:bg-yellow-200/60 px-3 py-2 rounded-xl duration-100 focus:bg-yellow-200"
+              >Home</a
+            >
+          </li>
+          <li class="mx-4 my-4 md:my-0">
+            <a
+              href="event.html"
+              class="text-xl hover:text-neutral-400 hover:bg-yellow-200/60 px-3 py-2 rounded-xl duration-100 active:bg-red-200"
+              >Events</a
+            >
+          </li>
+          <li class="mx-4 my-4 md:my-0">
+            <a
+              href="community.html"
+              class="text-xl hover:text-neutral-400 hover:bg-yellow-200/60 px-3 py-2 rounded-xl duration-100 active:bg-yellow-200"
+              >Forum</a
+            >
+          </li>
+          <li class="mx-4 my-4 md:my-0">
+            <a
+              href="#"
+              class="text-xl hover:text-neutral-400 hover:bg-yellow-200/60 px-3 py-2 rounded-xl duration-100 active:bg-yellow-200"
+              >Marketplace</a
+            >
+          </li>
+          <li class="mx-4 my-4 md:my-0">
+            <a
+              href="about.html"
+              class="text-xl hover:text-neutral-400 hover:bg-yellow-200/60 px-3 py-2 rounded-xl duration-100 active:bg-yellow-200"
+              >About</a
+            >
+          </li>
+          <li class="mx-4 my-4 md:my-0">
+            <a
+              href="faq.html"
+              class="text-xl hover:text-neutral-400 hover:bg-yellow-200/60 px-3 py-2 rounded-xl duration-100 active:bg-yellow-200"
+              >FAQ</a
+            >
+          </li>
+
+          <button
+            class="bg-yellow-400 duration-500 px-5 py-2 rounded-xl font-bold m-2 active:bg-yellow-200"
+          >
+            Join Us
+          </button>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="marketplace bg-neutral-500  p-5">
+      <div class="market p-5 text-center">
+        <h3 class="text-3xl capitalize text-black-600/80 mb-5 font-bold" >Buy and sell with confidence</h3>
+        <p class="capitalize text-xl">looking to buy your dream car , that rare parts to start or complete your build, or sell your builds to fellow enthusiast in our secure marketplace</p>
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <div class="text-center bg-black/90 m-2 p-5 rounded-2xl ">
+          <i class="fa-solid fa-gear hover:-translate-x-1 duration-400 text-red-600"></i>
+          <p class="font-semibold text-white capitalize text-l">Engines & Drive Train</p>
+          <p class="text-neutral-500 text-sm">2000 items</p>
+        </div>
+        <div class="text-center bg-black/90 m-2 p-5 rounded-2xl ">
+          <i class="fa-solid fa-gear hover:-translate-x-1 duration-400 text-red-600"></i>
+          <p class="font-semibold text-white capitalize text-l">Performance Parts</p>
+          <p class="text-neutral-500 text-sm">2000 items</p>
+        </div>
+        <div class="text-center bg-black/90 m-2 p-5 rounded-2xl ">
+          <i class="fa-solid fa-gear hover:-translate-x-1 duration-400 text-red-600"></i>
+          <p class="font-semibold text-white capitalize text-l">Wheels and Tires</p>
+          <p class="text-neutral-500 text-sm">2000 items</p>
+        </div>
+        <div class="text-center bg-black/90 m-2 p-5 rounded-2xl ">
+          <i class="fa-solid fa-gear hover:-translate-x-1 duration-400 text-red-600"></i>
+          <p class="font-semibold text-white capitalize text-l">Cars (builds&Mods)</p>
+          <p class="text-neutral-500 text-sm">2000 items</p>
+        </div>
+      </div>
+
+      <!-- MArket Place Listings -->
+      <div class="listings">
+        <div class="list">
+          <h3 class="text-3xl capitalize text-black-600/80 mb-5 font-bold text-center">Latest Listings</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4
+          '
+            ">
+
+            <div class="card bg-black/90 rounded-xl text-white hover:shadow-[0_0_10px_2px_blue] hover:-translate-y-1 transform transition duration-300 ease-out group">
+              <div class="listings categories relative">
+                <img src="/img/audi.jpeg" alt="" class="rounded-t-xl " />
+                <p class="absolute flex top-2 right-4  bg-neutral-800 px-3 py-1 font-bold rounded-3xl hover:bg-neutral-700">Car</p>
+              </div>
+              
+            <div class="p-4 ">
+              <h4 class="font-bold text-xl group-hover:text-red-600">Nissan Skyline R34</h4>
+              <i class="fa-solid fa-circle-user text-neutral-500 mr-2 "></i><span class="text-sm font-bold text-neutral-500  ">Bratva Auto</span>
+              <p class="text-x text-neutral font-bold mt-4 ">Engine: RB26DETT</p>
+              <p class="text-sm text-neutral-500 mt-2 ">Mileage: 120,000 km</p>
+              
+              <div class="flex justify-between items-center mb-4">
+               <p class="px-3 text-3xl text-red-600 font-extrabold mt-2">$45,000</p>
+               <div class="text-neutral-500">
+               <i class="fa-solid fa-eye"></i>
+               <span class="text-sm mt-2">1247</span>
+               </div>
+             </div>
+             <p class="bg-neutral-800 px-4 font-semibold w-fit mb-2  rounded-xl ">Build</p>
+            <i class="fa-solid fa-location-dot mr-2 text-neutral-500"></i><span class="text-neutral-400 text-sm mt-2 ">Abuja, FCT.</span>
+            <div class="flex justify-between items-center border-t mt-3 border-neutral-700 py-3">
+              <div>
+              <i class="fa-solid fa-clock mr-2 text-neutral-500"></i><span class="text-neutral-400 text-sm mt-2 ">3 days ago</span>
+            </div>
+              <p class="text-m text-neutral-500 text-white font-semibold p-4 rounded-2xl hover:bg-green-500/50">View details</p>
+            </div>
+           </div>
+        </div>
+        
+        <!-- ////// -->
+         <div class="card bg-black/90 rounded-xl text-white hover:shadow-[0_0_10px_2px_blue] hover:-translate-y-1 transform transition duration-300 ease-out group">
+              <div class="relative">
+                <img src="/img/audi.jpeg" alt="" class="rounded-t-xl " />
+                <p class="absolute flex top-2 right-4  bg-neutral-800 px-3 py-1 font-bold rounded-3xl hover:bg-neutral-700 ">Performance</p>
+              </div>
+              
+            <div class="p-4 ">
+              <h4 class="font-bold text-xl group-hover:text-red-600">Custom Turbo Kit - Universal</h4>
+              <i class="fa-solid fa-circle-user text-neutral-500 mr-2 "></i><span class="text-sm font-bold text-neutral-500  ">Turbo Experts</span>
+              <!-- <p class="text-x text-neutral font-bold mt-4 ">Engine: RB26DETT</p>
+              <p class="text-sm text-neutral-500 mt-2 ">Mileage: 120,000 km</p> -->
+              
+              <div class="flex justify-between items-center mb-4">
+               <p class="px-3 text-3xl text-red-600 font-extrabold mt-2">$5,000</p>
+               <div class="text-neutral-500">
+               <i class="fa-solid fa-eye"></i>
+               <span class="text-sm mt-2">127</span>
+               </div>
+             </div>
+             <p class="bg-neutral-800 px-4 font-semibold w-fit mb-2  rounded-xl ">Brand New</p>
+            <i class="fa-solid fa-location-dot mr-2 text-neutral-500"></i><span class="text-neutral-400 text-sm mt-2 ">Abuja, FCT.</span>
+            <div class="flex justify-between items-center border-t mt-3 border-neutral-700 py-3">
+              <div>
+              <i class="fa-solid fa-clock mr-2 text-neutral-500"></i><span class="text-neutral-400 text-sm mt-2 ">a week ago</span>
+            </div>
+              <p class="text-m text-neutral-500 text-white font-semibold p-4 rounded-2xl hover:bg-green-500/50">View details</p>
+            </div>
+           </div>
+        </div>
+
+        <!-- ///// -->
+         <div class="card bg-black/90 rounded-xl text-white hover:shadow-[0_0_10px_2px_blue] hover:-translate-y-1 transform transition duration-300 ease-out group">
+              <div class="relative">
+                <img src="/img/audi.jpeg" alt="" class="rounded-t-xl " />
+                <p class="absolute flex top-2 right-4  bg-neutral-800 px-3 py-1 font-bold rounded-3xl hover:bg-neutral-700 ">Performance</p>
+              </div>
+              
+            <div class="p-4 ">
+              <h4 class="font-bold text-xl group-hover:text-red-600">Custom Turbo Kit - Universal</h4>
+              <i class="fa-solid fa-circle-user text-neutral-500 mr-2 "></i><span class="text-sm font-bold text-neutral-500  ">Turbo Experts</span>
+              <!-- <p class="text-x text-neutral font-bold mt-4 ">Engine: RB26DETT</p>
+              <p class="text-sm text-neutral-500 mt-2 ">Mileage: 120,000 km</p> -->
+              
+              <div class="flex justify-between items-center mb-4">
+               <p class="px-3 text-3xl text-red-600 font-extrabold mt-2">$5,000</p>
+               <div class="text-neutral-500">
+               <i class="fa-solid fa-eye"></i>
+               <span class="text-sm mt-2">127</span>
+               </div>
+             </div>
+             <p class="bg-neutral-800 px-4 font-semibold w-fit mb-2  rounded-xl ">Brand New</p>
+            <i class="fa-solid fa-location-dot mr-2 text-neutral-500"></i><span class="text-neutral-400 text-sm mt-2 ">Abuja, FCT.</span>
+            <div class="flex justify-between items-center border-t mt-3 border-neutral-700 py-3">
+              <div>
+              <i class="fa-solid fa-clock mr-2 text-neutral-500"></i><span class="text-neutral-400 text-sm mt-2 ">a week ago</span>
+            </div>
+              <p class="text-m text-neutral-500 text-white font-semibold p-4 rounded-2xl hover:bg-green-500/50">View details</p>
+            </div>
+           </div>
+        </div>
+
+        <!-- ////// -->
+            <div class="card bg-black/90 rounded-xl text-white hover:shadow-[0_0_10px_2px_blue] hover:-translate-y-1 transform transition duration-300 ease-out group">
+              <div class="relative">
+                <img src="/img/audi.jpeg" alt="" class="rounded-t-xl " />
+                <p class="absolute flex top-2 right-4  bg-neutral-800 px-3 py-1 font-bold rounded-3xl hover:bg-neutral-700 ">Performance</p>
+              </div>
+              
+            <div class="p-4 ">
+              <h4 class="font-bold text-xl group-hover:text-red-600">Custom Turbo Kit - Universal</h4>
+              <i class="fa-solid fa-circle-user text-neutral-500 mr-2 "></i><span class="text-sm font-bold text-neutral-500  ">Turbo Experts</span>
+              <!-- <p class="text-x text-neutral font-bold mt-4 ">Engine: RB26DETT</p>
+              <p class="text-sm text-neutral-500 mt-2 ">Mileage: 120,000 km</p> -->
+              
+              <div class="flex justify-between items-center mb-4">
+               <p class="px-3 text-3xl text-red-600 font-extrabold mt-2">$5,000</p>
+               <div class="text-neutral-500">
+               <i class="fa-solid fa-eye"></i>
+               <span class="text-sm mt-2">127</span>
+               </div>
+             </div>
+             <p class="bg-neutral-800 px-4 font-semibold w-fit mb-2  rounded-xl ">Brand New</p>
+            <i class="fa-solid fa-location-dot mr-2 text-neutral-500"></i><span class="text-neutral-400 text-sm mt-2 ">Abuja, FCT.</span>
+            <div class="flex justify-between items-center border-t mt-3 border-neutral-700 py-3">
+              <div>
+              <i class="fa-solid fa-clock mr-2 text-neutral-500"></i><span class="text-neutral-400 text-sm mt-2 ">a week ago</span>
+            </div>
+              <p class="text-m text-neutral-500 text-white font-semibold p-4 rounded-2xl hover:bg-green-500/50">View details</p>
+            </div>
+           </div>
+        </div>
+        </div>
+        <!-- <button
+              class="flex bg-orange-950 hover:bg-orange-900 justify-center mt-10 mb-5 p-3 w-fit m-auto rounded-xl font-bold text-lg  capitalize text-white/70"
+            >
+              Browse All Listings
+            </button> -->
+    </div>
+    </section>
+
+    <footer class="bg-black/80 text-white p-8 iteems-center">
+        <h4 class="text-4xl font-bold capitalize mb-4 text-center">Ready to join the culture?</h4>
+        <p class="text-neutral-400 text-center">Connect with thousands of car enthusiasts, showcase your builds, and discover the latest in automotive culture.</p>
+      <div class="grid grid-cols-1 gap-6 mt-8 text-xl">
+        <p class="bg-orange-700 w-full text-center p-4 rounded-2xl hover:scale-110 transform transition duration-300 ease-in">Join the commnunity</p>
+        <p class="bg-neutral-800 w-full text-center p-4 rounded-2xl border-1 border-neutral-700" >Explore features</p>
+      </div>
+      <div class="socials flex justify-center mt-4 gap-4 text-blue-800 text-2xl ">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-facebook"></i>
+      </div>
+    </footer>
+
+  </body>
+</html>

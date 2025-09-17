@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>Document</title>
+  </head>
+  <body class="max-w-screen overflow-x-hidden">
+    <!-- header -->
+    <header>
+      <nav class="p-3 bg-gray-950 md:flex md:items-center md:justify-between">
+        <div class="flex justify-between items-center">
+          <span class="cursor-pointer"
+            ><img src="/img/LL.png" class="w-30 h-15" alt="" />
+          </span>
+          <span class="text-3xl md:hidden text-neutral-100 cursor-pointer">
+             <i class="fa-solid fa-bars text-3xl md:hidden text-neutral-100 cursor-pointer mb-4" onclick="sidebar(this)"></i>
+            <!-- <i
+              class="fa-solid fa-bars mb-4"
+              name="menu-outline"
+              onclick="sidebar(this)"
+            ></i> -->
+          </span>
+        </div>
+
+        <ul
+          class="md:flex text-white md:items-center md:gap-1 z-999 md:z-auto md:static absolute w-full right-0 md:w-auto md:opacity-100 opacity-10 top-[-400px] transition-all-ease-in duration-600 md:py-0 py-4 md:pl-0 pl-7 backdrop-blur text-center"
+        >
+          <!-- class="md:flex md:items-center md:gap-2 z-20 md:static absolute w-full
+          left-0 md:w-auto md:opacity-100 opacity-100 top-0 transition-all
+          ease-in duration-600 md:py-0 py-4 md:pl-0 pl-7 bg-white/80
+          backdrop-blur-md shadow-md text-center" -->
+
+          <li class="mx-2 my-4 md:my-0">
+            <a
+              href="#"
+              class="text-xl hover:text-neutral-100 hover:bg-yellow-200/60 px-3 py-2 rounded-xl duration-100 focus:bg-yellow-200"
+              >Home</a
+            >
+          </li>
+          <li class="mx-4 my-4 md:my-0">
+            <a
+              href="event.html"
+              class="text-xl hover:text-neutral-400 hover:bg-yellow-200/60 px-3 py-2 rounded-xl duration-100 active:bg-red-200"
+              >Events</a
+            >
+          </li>
+          <li class="mx-4 my-4 md:my-0">
+            <a
+              href="community.html"
+              class="text-xl hover:text-neutral-400 hover:bg-yellow-200/60 px-3 py-2 rounded-xl duration-100 active:bg-yellow-200"
+              >Forum</a
+            >
+          </li>
+          <li class="mx-4 my-4 md:my-0">
+            <a
+              href="marketplace.html"
+              class="text-xl hover:text-neutral-400 hover:bg-yellow-200/60 px-3 py-2 rounded-xl duration-100 active:bg-yellow-200"
+              >Marketplace</a
+            >
+          </li>
+          <li class="mx-4 my-4 md:my-0">
+            <a
+              href="about.html"
+              class="text-xl hover:text-neutral-400 hover:bg-yellow-200/60 px-3 py-2 rounded-xl duration-100 active:bg-yellow-200"
+              >About</a
+            >
+          </li>
+          <li class="mx-4 my-4 md:my-0">
+            <a
+              href="faq.html"
+              class="text-xl hover:text-neutral-400 hover:bg-yellow-200/60 px-3 py-2 rounded-xl duration-100 active:bg-yellow-200"
+              >FAQ</a
+            >
+          </li>
+
+          <button
+            class="bg-yellow-400 duration-500 px-5 py-2 rounded-xl font-bold m-2 active:bg-yellow-200"
+          >
+            Join Us
+          </button>
+        </ul>
+      </nav>
+    </header>
+    <!-- header end -->
+
+    <!-- hero -->
+    <section
+      style="background-image: url(/img/hero.jpg)"
+      class="h-screen bg-cover bg-center bg-gradient-to-r from-black/70 to-white/20"
+    >
+      <div
+        class="px-2 py-25 lg:px-20 lg:py-45 md:text-3xl md:text-left text-white justify-center text-center"
+      >
+        
+        <h1
+          class="uppercase text-3xl mb-4 font-bold md:text-5xl md:py-4 py-3 md:px-4"
+        >
+          Abuja Car Culture Club
+        </h1>
+        <div class="bg-white/10 p-3 mb-7 rounded-xl align-center w-fit m-auto">
+          <i class="fa-solid fa-bolt mr-2"></i
+          ><span class="capitalize font-semibold md:text-2xl"
+            >The future of car Community</span
+          >
+        </div>
+
+        <p class="md:text-4xl md:py-5 py-3 text-2xl font-semibold md:px-4 grid gap-2">
+          <span class="text-red-950 font-bold">Share the Passion</span>
+          <span class="font-semibold">Connect</span>  
+          <span class="text-red-900 font-bold">Drift</span>
+          <span class="font-semibold">Build</span> 
+        </p>
+
+        <button
+          class="rounded-xl text-xl bg-red-800 p-3 m-5 capitalize font-bold hover:bg-red-700"
+        >
+          <a href="#" class="p-3">Join the community</a>
+        </button>
+
+        <div
+          class="flex justify-center gap-6 text-center mt-10 lg:mt-25 lg:gap-35"
+        >
+          <div class="rate-card text-blue-900">
+            <i class="fa-solid fa-users mr-2"></i
+            ><span class="text-l md:text-2xl font-bold lg:text-4xl">1K+</span>
+            <p class="text-neutral-400 mt-2 lg:text-2xl font-semibold">
+              Members
+            </p>
+          </div>
+          <div class="rate-card text-green-500">
+            <i class="fa-solid fa-trophy mr-2"></i
+            ><span span class="text-l md:text-2xl font-bold lg:text-4xl"
+              >100+</span
+            >
+            <p class="text-neutral-400 mt-2 lg:text-2xl font-semibold">
+              Events Hosted
+            </p>
+          </div>
+          <div class="rate-card text-blue-900">
+            <i class="fa-solid fa-star mr-2"></i
+            ><span span class="text-l md:text-2xl font-bold lg:text-4xl"
+              >500+</span
+            >
+            <p class="text-neutral-400 mt-2 lg:text-2xl font-semibold">
+              Builds Shared
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero end -->
+
+    <!-- Car culture Features  -->
+    <section class="p-2 bg-black/80">
+      <div>
+        <h1
+          class="bg-white/40 justify-center mt-5 mb-5 px-3 py-2 w-fit m-auto rounded-xl font-semibold text-l uppercase md:text-3xl text-white/70"
+        >
+          Features
+        </h1>
+        <h2
+          class="text-4xl text-center font-bold capitalize text-white/80 p-4 md:text-6xl"
+        >
+          Everthing you need for <span class="text-green-500">car culture</span>
+        </h2>
+        <p class="text-center justify-center text-xl text-neutral-400">
+          From sharing your latest builds to finding rare parts, Abuja car
+          culture provided all the tools you need to connect with the commnunity
+        </p>
+      </div>
+
+      <div
+        class="features p-3 mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12 md:px-10 lg:px-20"
+      >
+        <div
+          class="features-card px-5 py-4 bg-white/50 rounded-xl hover:-translate-y-2 hover:shadow-[0_0_5px_2px_white] transition-shadow duration-300 group"
+        >
+          <div class="flex items-center justify-between">
+            <i class="fa-solid fa-users p-2 bg-white rounded"></i>
+            <p class="bg-gray-200 px-3 py-1 rounded-xl">Popular</p>
+          </div>
+          <h3 class="text-xl font-bold mt-2 py-2">Community Hub</h3>
+          <p class="text-neutral-600 text-lg">
+            Connect with expert in the industry and fellow car enthusiast within
+            the scope of Abuja
+          </p>
+          <button
+            class="bg-gray-200 w-full rounded-xl p-2 mt-4 group-hover:bg-neutral-700 group-hover:text-white hover:text-neutral-400"
+          >
+            <a href="community.html">Learn More</a>
+          </button>
+        </div>
+
+        <div
+          class="features-card px-5 py-4 bg-white/50 rounded-xl hover:-translate-y-2 hover:shadow-[0_0_5px_2px_white] transition-shadow duration-300 group"
+        >
+          <div class="flex items-center justify-between">
+            <i class="fa-solid fa-camera p-2 bg-white rounded"></i>
+            <p class="bg-gray-200 px-3 py-1 rounded-xl">Popular</p>
+          </div>
+          <h3 class="text-xl font-bold mt-2 py-2">Showcase Builds</h3>
+          <p class="text-neutral-600 text-lg">
+            Connect with expert in the industry and fellow car enthusiast within
+            the scope of Abuja
+          </p>
+          <button
+            class="bg-gray-200 w-full rounded-xl p-2 mt-4 group-hover:bg-neutral-700 group-hover:text-white hover:text-neutral-400"
+          >
+            <a href="#">Learn More</a>
+          </button>
+        </div>
+
+        <div
+          class="features-card px-5 py-4 bg-white/50 rounded-xl hover:-translate-y-2 hover:shadow-[0_0_5px_2px_white] transition-shadow duration-300 group"
+        >
+          <div class="flex items-center justify-between">
+            <i class="fa-solid fa-calendar p-2 bg-white rounded"></i>
+            <p class="bg-gray-200 px-3 py-1 rounded-xl">Popular</p>
+          </div>
+          <h3 class="text-xl font-bold mt-2 py-2">Events</h3>
+          <p class="text-neutral-600 text-lg">
+            Connect with expert in the industry and fellow car enthusiast within
+            the scope of Abuja
+          </p>
+          <button
+            class="bg-gray-200 w-full rounded-xl p-2 mt-4 group-hover:bg-neutral-700 group-hover:text-white hover:text-neutral-400"
+          >
+            <a href="#">Learn More</a>
+          </button>
+        </div>
+        <div
+          class="features-card px-5 py-4 bg-white/50 rounded-xl hover:-translate-y-2 hover:shadow-[0_0_5px_2px_white] transition-shadow duration-300 group"
+        >
+          <div class="flex items-center justify-between">
+            <i class="fa-solid fa-shop p-2 bg-white rounded"></i>
+            <p class="bg-gray-200 px-3 py-1 rounded-xl">Popular</p>
+          </div>
+          <h3 class="text-xl font-bold mt-2 py-2">Marketplace</h3>
+          <p class="text-neutral-600 text-lg">
+            Connect with expert in the industry and fellow car enthusiast within
+            the scope of Abuja
+          </p>
+          <button
+            class="bg-gray-200 w-full rounded-xl p-2 mt-4 group-hover:bg-neutral-700 group-hover:text-white hover:text-neutral-400"
+          >
+            <a href="marketplace.html">Learn More</a>
+          </button>
+        </div>
+
+        <div
+          class="features-card px-5 py-4 bg-white/50 rounded-xl hover:-translate-y-2 hover:shadow-[0_0_5px_2px_white] transition-shadow duration-300 group"
+        >
+          <div class="flex items-center justify-between">
+            <i class="fa-solid fa-trophy p-2 bg-white rounded"></i>
+            <p class="bg-gray-200 px-3 py-1 rounded-xl">Limited</p>
+          </div>
+          <h3 class="text-xl font-bold mt-2 py-2">Competitions</h3>
+          <p class="text-neutral-600 text-lg">
+            Connect with expert in the industry and fellow car enthusiast within
+            the scope of Abuja
+          </p>
+          <button
+            class="bg-gray-200 w-full rounded-xl p-2 mt-4 group-hover:bg-neutral-700 group-hover:text-white hover:text-neutral-400"
+          >
+            <a href="#">Learn More</a>
+          </button>
+        </div>
+
+        <div
+          class="features-card px-5 py-4 bg-white/50 rounded-xl hover:-translate-y-2 hover:shadow-[0_0_5px_2px_white] transition-shadow duration-300 group"
+        >
+          <div class="flex items-center justify-between">
+            <i class="fa-solid fa-trophy p-2 bg-white rounded"></i>
+            <p class="bg-gray-200 px-3 py-1 rounded-xl">Chat</p>
+          </div>
+          <h3 class="text-xl font-bold mt-2 py-2">Expert Forum</h3>
+          <p class="text-neutral-600 text-lg">
+            Connect with expert in the industry and fellow car enthusiast within
+            the scope of Abuja
+          </p>
+          <button
+            class="bg-gray-200 w-full rounded-xl p-2 mt-4 group-hover:bg-neutral-700 group-hover:text-white hover:text-neutral-400"
+          >
+            <a href="#">Learn More</a>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Car culture Features End -->
+
+    <!-- Communty post start -->
+   
+    <!-- latest forums -->
+    <section>
+      <div class="Forums bg-zinc-950 px-4 py-10">
+        <h2
+          class="text-2xl text-center p-2 bg-black/60 align-center w-fit justify-center m-auto rounded-xl text-white/95 font-semibold mb-4"
+        >
+          Community
+        </h2>
+        <p
+          class="text-center text-neutral-100 font-bold capitalize text-3xl mb-5"
+        >
+          Latest from the
+          <span class="text-red-900/90 font-bold">community</span>
+        </p>
+        <p class="text-center text-xl mb-15 p-2 text-white/90">
+          Help solve a problem, and See what fellow car enthusiasts are
+          building, sharing, and discussing right now.
+        </p>
+
+        <!-- latest post cards -->
+
+
+        <div class="posts grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+          <!-- First Post -->
+           <!-- //////////////////////// -->
+          
+            <div
+              class="features-card px-5 py-4 bg-black/50 text-white rounded-xl hover:shadow-[0_0_10px_2px_white] transition-shadow duration-300 group"
+            >
+              <div class="flex items-center justify-between">
+                <div class="flex gap-1 items-center">
+                  <i class="fa-solid p-3 bg-white text-red-600/80 rounded-3xl"
+                    >AT</i
+                  >
+                  <a href="profile.html">
+                  <div class="py-0">
+                    <p class="font-bold text-l capitalize">Agba turner</p>
+                    <p class="text-xs mt-1">@agbaturner</p>
+                  </div>
+                </a>
+                </div>
+
+                <div class="flex flex-col items-end">
+                  <p class="bg-gray-700 px-2 py-1 rounded-xl text-sm">
+                    Audi Quattro
+                  </p>
+                  <p class="mt-1 mr-2 text-xs font-bold">2h ago</p>
+                </div>
+              </div>
+              <p class="text-lg mt-5">
+                Just started out with my new project buld on the audi quataro,
+                hopefully i can complete it before the year runs our, lets enjoy
+                the ride together<i
+                  class="fa-solid fa-fire ml-2 text-yellow-500"
+                ></i>
+              </p>
+              <a href="#">
+              <img src="/img/audi.jpeg" alt="" class="mt-8 rounded-xl" /></a>
+              <div class="tag flex gap-3 mt-6 border-b pb-5">
+                <p
+                  class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+                >
+                  #turbolife
+                </p>
+                <p
+                  class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+                >
+                  #audi
+                </p>
+                <p
+                  class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+                >
+                  #kenblock
+                </p>
+              </div>
+
+              <div class="action flex justify-between mt-5">
+                <div class="reactions flex gap-2 items-center">
+                  <div class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2">
+                  <i class="fa-regular fa-heart "></i
+                  ><span class="px-1">234</span>
+                </div>
+                <div class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2">
+                  <i class="fa-regular fa-comment "></i
+                  ><span class="px-1">50</span>
+                </div>
+                <div class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2">
+                  <i class="fa-regular fa-thumbs-up "></i
+                  ><span class="px-1">700</span>
+                </div>
+                </div> 
+                <div
+                  class="actions flex gap-4 items-center hover:cursor-pointer"
+                >
+                  <i
+                    class="fa-solid fa-share-nodes hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                  ></i>
+                  <i
+                    class="fa-solid fa-bookmark hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          <!-- forst post ending -->
+            <!-- //////////////////////// -->
+             
+        <!-- post card end-->
+      </div>
+      <button
+              class="flex bg-white/40 justify-center mt-5 mb-5 px-3 py-2 w-fit m-auto rounded-xl font-semibold text-l capitalize text-white/70"
+            >
+             <a href="community.html">View all posts</a>
+            </button>
+    </section>
+
+    <!-- Mrketplace -->
+    <section class="marketplace bg-neutral-500  p-5">
+      <div class="market p-5 text-center">
+        <h3 class="text-3xl capitalize text-black-600/80 mb-5 font-bold" >Buy and sell with confidence</h3>
+        <p class="capitalize text-xl">looking to buy your dream car , that rare parts to start or complete your build, or sell your builds to fellow enthusiast in our secure marketplace</p>
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <div class="text-center bg-black/90 m-2 p-5 rounded-2xl ">
+          <i class="fa-solid fa-gear hover:-translate-x-1 duration-400 text-red-600"></i>
+          <p class="font-semibold text-white capitalize text-l">Engines & Drive Train</p>
+          <p class="text-neutral-500 text-sm">2000 items</p>
+        </div>
+        <div class="text-center bg-black/90 m-2 p-5 rounded-2xl ">
+          <i class="fa-solid fa-gear hover:-translate-x-1 duration-400 text-red-600"></i>
+          <p class="font-semibold text-white capitalize text-l">Performance Parts</p>
+          <p class="text-neutral-500 text-sm">2000 items</p>
+        </div>
+        <div class="text-center bg-black/90 m-2 p-5 rounded-2xl ">
+          <i class="fa-solid fa-gear hover:-translate-x-1 duration-400 text-red-600"></i>
+          <p class="font-semibold text-white capitalize text-l">Wheels and Tires</p>
+          <p class="text-neutral-500 text-sm">2000 items</p>
+        </div>
+        <div class="text-center bg-black/90 m-2 p-5 rounded-2xl ">
+          <i class="fa-solid fa-gear hover:-translate-x-1 duration-400 text-red-600"></i>
+          <p class="font-semibold text-white capitalize text-l">Cars (builds&Mods)</p>
+          <p class="text-neutral-500 text-sm">2000 items</p>
+        </div>
+      </div>
+
+      <!-- MArket Place Listings -->
+      <div class="listings">
+        <div class="list">
+          <h3 class="text-3xl capitalize text-black-600/80 mb-5 font-bold text-center">Latest Listings</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4
+          '
+            ">
+
+            <div class="card bg-black/90 rounded-xl text-white hover:shadow-[0_0_10px_2px_blue] hover:-translate-y-1 transform transition duration-300 ease-out group">
+              <div class="listings categories relative">
+                <img src="/img/audi.jpeg" alt="" class="rounded-t-xl " />
+                <p class="absolute flex top-2 right-4  bg-neutral-800 px-3 py-1 font-bold rounded-3xl hover:bg-neutral-700">Car</p>
+              </div>
+              
+            <div class="p-4 ">
+              <h4 class="font-bold text-xl group-hover:text-red-600">Nissan Skyline R34</h4>
+              <i class="fa-solid fa-circle-user text-neutral-500 mr-2 "></i><span class="text-sm font-bold text-neutral-500  ">Bratva Auto</span>
+              <p class="text-x text-neutral font-bold mt-4 ">Engine: RB26DETT</p>
+              <p class="text-sm text-neutral-500 mt-2 ">Mileage: 120,000 km</p>
+              
+              <div class="flex justify-between items-center mb-4">
+               <p class="px-3 text-3xl text-red-600 font-extrabold mt-2">$45,000</p>
+               <div class="text-neutral-500">
+               <i class="fa-solid fa-eye"></i>
+               <span class="text-sm mt-2">1247</span>
+               </div>
+             </div>
+             <p class="bg-neutral-800 px-4 font-semibold w-fit mb-2  rounded-xl ">Build</p>
+            <i class="fa-solid fa-location-dot mr-2 text-neutral-500"></i><span class="text-neutral-400 text-sm mt-2 ">Abuja, FCT.</span>
+            <div class="flex justify-between items-center border-t mt-3 border-neutral-700 py-3">
+              <div>
+              <i class="fa-solid fa-clock mr-2 text-neutral-500"></i><span class="text-neutral-400 text-sm mt-2 ">3 days ago</span>
+            </div>
+              <p class="text-m text-neutral-500 text-white font-semibold p-4 rounded-2xl hover:bg-green-500/50">View details</p>
+            </div>
+           </div>
+        </div>
+
+        <!-- ////// -->
+           
+        </div>
+        <button
+              class="flex bg-orange-950 hover:bg-orange-900 justify-center mt-10 mb-5 p-3 w-fit m-auto rounded-xl font-bold text-lg  capitalize text-white/70"
+            >
+              Browse All Listings
+            </button>
+    </div>
+    </section>
+
+    <!-- MArketplace ends  -->
+
+     <section class="bg-black/90 p-2">
+      <div>
+        <h2
+          class="py-4 px-10 md:text-3xl md:text-center md:py-6 font-bold text-center uppercase text-3xl text-neutral-400"
+        >
+          Connect at <span class="text-red-900 font-extrabold ">Live</span> Events
+        </h2>
+        <p class="text-center text-white/60 mb-4 text-xl px-8">From local car meets to racing championships, discover and join events happening in your area</p>
+
+        <!-- //// events -->
+        <div
+          class="events p-2 md:px-24 grid grid-cols-1 md:grid-cols-2 md:gap-8 gap-4 w-full object-cover "
+        >
+          <div
+            class="events-card bg-neutral-800 shadow-xl rounded-xl text-white"
+          >
+          <div class="relative p-0 w-fit ">
+            <img src="/img/drift1.jpg" alt="" class="rounded-t-2xl">
+            <div class="flex inset-0 absolute top-2 justify-between px-2 h-fit font-semibold ">
+              <h3 class="bg-orange-800 px-3 rounded-2xl hover:bg-orange-700 ">Upcoming</h3>
+              <p class="bg-neutral-800 px-2 rounded-2xl hover:bg-neutral-500">Drifts</p>
+            </div>
+          </div>
+          <div class=" px-2 py-6">
+            <h3 class="text-xl px-1 font-bold">Stadium Drift Show</h3>
+            <p class="text-neutral-600 px-1 "> by Adrenaline Crew</p>
+            <p class="px-1 py-2 text-l">
+              Join us for an adrenaline rush this sunday
+            </p>
+            <!-- event icon -->
+            <div class="flex items-center py-2">
+              <i
+                class="fa-solid fa-calendar-days md:fa-2x text-red-600 mr-2"
+              ></i>
+              <span class="md:font-medium text-sm text-neutral-400"
+                >9AM , Sunday October 25th, 2025</span
+              >
+            </div>
+
+            <div class="flex items-center py-2">
+              <i
+                class="fa-solid fa-location-dot md:fa-2x text-red-600 mr-2"
+              ></i>
+              <span class="md:font-medium text-sm text-neutral-400">King wash</span>
+            </div>
+
+            <div class="flex items-center py-2">
+              <i class="fa-solid fa-people-group md:fa-2x text-red-600 mr-2"></i>
+              <span class="md:font-medium text-sm text-neutral-400">300/7000</span>
+            </div>
+
+            <div class="tag text-sm flex gap-2 mt-4 border-b-1 pb-5 border-neutral-700 capitalize">
+              <p class="bg-black px-2 rounded-2xl">BMW</p>
+              <p class="bg-black px-2 rounded-2xl">BENZ</p>
+              <p class="bg-black px-2 rounded-2xl">AUDI</p>
+              <p class="bg-black px-2 rounded-2xl">FORD</p>
+            </div>
+            <div class="flex justify-between capitalize mt-4 items-center ">
+              <p class="bg-green-400/10 px-2 py-1 rounded-xl hover:bg-green-500/20 uppercase">free</p>
+              <p class="p-2 rounded-xl hover:bg-green-500/10 " >Join event</p>
+            </div>
+
+            <div class="progress w-full bg-gray-200 rounded-full h-2 mt-4">
+              <div class="bg-blue-500 h-2 rounded-full" style="width: 65%;"></div>
+            </div>
+          </div>
+          </div>
+          <div
+            class="events-card bg-neutral-800 shadow-xl rounded-xl text-white"
+          >
+          <div class="relative ">
+            <img src="/img/drift2.jpg" alt="" class="rounded-t-2xl w-full object-cover">
+            <div class="flex inset-0 absolute top-2 justify-between px-2 h-fit font-semibold ">
+              <h3 class="bg-orange-800 px-3 rounded-2xl hover:bg-orange-700 ">Upcoming</h3>
+              <p class="bg-neutral-800 px-2 rounded-2xl hover:bg-neutral-500">Showcase</p>
+            </div>
+          </div>
+          <div class="px-2 py-6">
+            <h3 class="text-xl px-1 font-bold">Car Showcase and CrossOver</h3>
+            <p class="text-neutral-600 px-1 "> by Abuja car culture</p>
+            <p class="py-2 text-l">
+              Lets step into the grreatness of new year with a bang
+            </p>
+            <!-- event icon -->
+            <div class="flex items-center py-2">
+              <i
+                class="fa-solid fa-calendar-days md:fa-2x text-red-600 mr-2"
+              ></i>
+              <span class="text-sm text-neutral-400 md:font-medium"
+                >9PM New Year EVe</span
+              >
+            </div>
+
+            <div class="flex items-center py-2">
+              <i
+                class="fa-solid fa-location-dot md:fa-2x text-red-600 mr-2"
+              ></i>
+              <span class="text-sm text-neutral-400 md:font-medium">Constititution Road Abuja</span>
+            </div>
+
+            <div class="flex items-center py-2">
+              <i class="fa-solid fa-people-group md:fa-2x text-red-600 mr-2"></i>
+              <span class="text-sm text-neutral-400 md:font-medium">300/700 attending</span>
+            </div>
+
+            <div class="tag flex text-sm gap-2 mt-4 border-b-1 pb-5 border-neutral-700 capitalize">
+              <p class="bg-black px-2 rounded-2xl ">Builds</p>
+              <p class="bg-black px-2 rounded-2xl ">Showcase</p>
+              <p class="bg-black px-2 rounded-2xl ">Meet</p>
+              <p class="bg-black px-2 rounded-2xl ">roadsters</p>
+            </div>
+            <div class="flex justify-between capitalize mt-4 items-center ">
+              <p class="bg-green-400/10 px-2 py-1 rounded-xl hover:bg-green-500/20 uppercase">Booze and Vibez</p>
+              <p class="p-2 rounded-xl hover:bg-green-500/10 " >Join event</p>
+            </div>
+
+            <div class="progress w-full bg-gray-200 rounded-full h-2 mt-4">
+              <div class="bg-blue-500 h-2 rounded-full" style="width: 80%;"></div>
+            </div>
+          </div>
+          </div>
+          </div>
+        </div>
+
+          <button
+              class="flex bg-green-950 hover:bg-green-900 justify-center mt-10 mb-5 p-3 w-fit m-auto rounded-xl font-bold text-lg  capitalize text-white/70"
+            >
+              <a href="#" class="items-center">View all events</a>
+            </button>
+      </div>
+    </section>
+
+    <footer class="bg-black/80 text-white p-8 iteems-center">
+        <h4 class="text-4xl font-bold capitalize mb-4 text-center">Ready to join the culture?</h4>
+        <p class="text-neutral-400 text-center">Connect with thousands of car enthusiasts, showcase your builds, and discover the latest in automotive culture.</p>
+      <div class="grid grid-cols-1 gap-6 mt-8 text-xl">
+        <p class="bg-orange-700 w-full text-center p-4 rounded-2xl hover:scale-110 transform transition duration-300 ease-in">Join the commnunity</p>
+        <p class="bg-neutral-800 w-full text-center p-4 rounded-2xl border-1 border-neutral-700" >Explore features</p>
+      </div>
+      <div class="socials flex justify-center mt-4 gap-4 text-blue-800 text-2xl ">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-facebook"></i>
+      </div>
+    </footer>
+
+    <!-- Events End -->
+
+  </body>
+</html>

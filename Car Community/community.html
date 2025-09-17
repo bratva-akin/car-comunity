@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>Abuja Car culture</title>
+  </head>
+
+  <body class="max-w-screen overflow-x-hidden">
+    <header>
+      <nav class="p-3 bg-gray-950 md:flex md:items-center md:justify-between">
+        <div class="flex justify-between items-center">
+          <span class="cursor-pointer"
+            ><img src="/img/LL.png" class="w-30 h-15" alt="" />
+          </span>
+          <span class="text-3xl md:hidden text-neutral-100 cursor-pointer">
+            <i
+              class="fa-solid fa-bars text-3xl md:hidden text-neutral-100 cursor-pointer mb-4"
+              onclick="sidebar(this)"
+            ></i>
+            <!-- <i
+              class="fa-solid fa-bars mb-4"
+              name="menu-outline"
+              onclick="sidebar(this)"
+            ></i> -->
+          </span>
+        </div>
+
+        <ul
+          class="md:flex text-white md:items-center md:gap-1 z-999 md:z-auto md:static absolute w-full right-0 md:w-auto md:opacity-100 opacity-10 top-[-400px] transition-all-ease-in duration-600 md:py-0 py-4 md:pl-0 pl-7 backdrop-blur text-center"
+        >
+          <!-- class="md:flex md:items-center md:gap-2 z-20 md:static absolute w-full
+          left-0 md:w-auto md:opacity-100 opacity-100 top-0 transition-all
+          ease-in duration-600 md:py-0 py-4 md:pl-0 pl-7 bg-white/80
+          backdrop-blur-md shadow-md text-center" -->
+
+          <li class="mx-2 my-4 md:my-0">
+            <a
+              href="index.html"
+              class="text-xl hover:text-neutral-100 hover:bg-yellow-200/60 px-3 py-2 rounded-xl duration-100 focus:bg-yellow-200"
+              >Home</a
+            >
+          </li>
+          <li class="mx-4 my-4 md:my-0">
+            <a
+              href="event.html"
+              class="text-xl hover:text-neutral-400 hover:bg-yellow-200/60 px-3 py-2 rounded-xl duration-100 active:bg-red-200"
+              >Events</a
+            >
+          </li>
+          <li class="mx-4 my-4 md:my-0">
+            <a
+              href="#"
+              class="text-xl hover:text-neutral-400 hover:bg-yellow-200/60 px-3 py-2 rounded-xl duration-100 active:bg-yellow-200"
+              >Forum</a
+            >
+          </li>
+          <li class="mx-4 my-4 md:my-0">
+            <a
+              href="marketplace.html"
+              class="text-xl hover:text-neutral-400 hover:bg-yellow-200/60 px-3 py-2 rounded-xl duration-100 active:bg-yellow-200"
+              >Marketplace</a
+            >
+          </li>
+          <li class="mx-4 my-4 md:my-0">
+            <a
+              href="about.html"
+              class="text-xl hover:text-neutral-400 hover:bg-yellow-200/60 px-3 py-2 rounded-xl duration-100 active:bg-yellow-200"
+              >About</a
+            >
+          </li>
+          <li class="mx-4 my-4 md:my-0">
+            <a
+              href="faq.html"
+              class="text-xl hover:text-neutral-400 hover:bg-yellow-200/60 px-3 py-2 rounded-xl duration-100 active:bg-yellow-200"
+              >FAQ</a
+            >
+          </li>
+
+          <button
+            class="bg-yellow-400 duration-500 px-5 py-2 rounded-xl font-bold m-2 active:bg-yellow-200"
+          >
+            Join Us
+          </button>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="community-page">
+      <div class="Forums bg-zinc-950 px-4 py-5 xl:px-20 xl:py-15">
+        <!-- <h2
+          class="text-2xl text-center p-2 bg-black/60 align-center w-fit justify-center m-auto rounded-xl text-white/95 font-semibold mb-4"
+        >
+          Community
+        </h2> -->
+
+        <h3
+          class="text-center text-neutral-100 font-bold capitalize text-3xl mb-5"
+        >
+          Latest from the
+          <span class="text-red-900/90 font-bold">community</span>
+        </h3>
+        <p class="text-center text-xl mb-15 p-2 text-white/90">
+          Help solve a problem, and See what fellow car enthusiasts are
+          building, sharing, and discussing right now.
+        </p>
+
+        <!-- post area -->
+        <div
+          class="bg-white rounded-sm py-5 mb-6 shadow-md xl:mx-60 xl:items-center xl:text-center xl:justify-center"
+        >
+          <div class="flex gap-1 items-center border-b border-neutral-200 px-2">
+            <i
+              class="fa-solid fa-user w-5 h-10 flex-[0.1] bg-blue-500 p-1 rounded-full text-2xl text-center"
+            ></i>
+            <textarea
+              placeholder="Share what you are currently working on ......"
+              class="w-full flex-[0.9] text-center rounded-lg p-2 focus:ring focus:ring-blue-300 text-l"
+              rows="2"
+            ></textarea>
+          </div>
+          <div class="flex justify-between items-center mt-3 px-2">
+            <div>
+              <button class="p-2 hover:text-blue-500">
+                <i class="fa-regular fa-image"></i>
+              </button>
+              <button class="p-2 hover:text-blue-500">
+                <i class="fa-regular fa-folder"></i>
+              </button>
+              <button class="p-2 hover:text-blue-500">
+                <i class="fa-solid fa-tag"></i>
+              </button>
+            </div>
+            <p class="bg-neutral-400 w-fit px-4 py-1 rounded-xl font-medium">
+              Post
+            </p>
+          </div>
+        </div>
+        <!-- tags area -->
+        <div
+          class="tags text-white flex flex-wrap gap-4 text-l font-medium px-3 xl:items-center xl:text-center xl:justify-center"
+        >
+          <p class="bg-neutral-400 p-1 rounded-sm text-black">Latest</p>
+          <p class="bg-neutral-400 p-1 rounded-sm text-black">Most Popular</p>
+          <p class="bg-neutral-400 p-1 rounded-sm text-black">Trending</p>
+          <p class="bg-neutral-400 p-1 rounded-sm text-black">Bimmers</p>
+          <p class="bg-neutral-400 p-1 rounded-sm text-black">Drift</p>
+          <p class="bg-neutral-400 p-1 rounded-sm text-black">Custom Builds</p>
+          <p class="bg-neutral-400 p-1 rounded-sm text-black">Cars</p>
+          <p class="bg-neutral-400 p-1 rounded-sm text-black">Showcase</p>
+          <p class="bg-neutral-400 p-1 rounded-sm text-black">Drift Build</p>
+        </div>
+
+        <!-- Tabs -->
+
+        <!-- Post Card -->
+
+        <!-- latest post cards -->
+
+        <div
+          class="posts grid grid-cols-1 gap-6 md:grid-cols-2 mt-10 lg:grid-cols-3"
+        >
+          <!-- First Post -->
+          <!-- //////////////////////// -->
+
+          <div
+            class="features-card px-5 py-4 bg-black/50 text-white rounded-xl hover:shadow-[0_0_10px_2px_white] transition-shadow duration-300 group"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex gap-1 items-center">
+                <i class="fa-solid p-3 bg-white text-red-600/80 rounded-3xl"
+                  >AT</i
+                >
+                <a href="profile.html">
+                  <div class="py-0">
+                    <p class="font-bold text-l capitalize">Agba turner</p>
+                    <p class="text-xs mt-1">@agbaturner</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="flex flex-col items-end">
+                <p class="bg-gray-700 px-2 py-1 rounded-xl text-sm">
+                  Audi Quattro
+                </p>
+                <p class="mt-1 mr-2 text-xs font-bold">2h ago</p>
+              </div>
+            </div>
+            <p class="text-lg mt-5">
+              Just started out with my new project buld on the audi quataro,
+              hopefully i can complete it before the year runs our, lets enjoy
+              the ride together<i
+                class="fa-solid fa-fire ml-2 text-yellow-500"
+              ></i>
+            </p>
+            <a href="#">
+              <img src="/img/audi.jpeg" alt="" class="mt-8 rounded-xl"
+            /></a>
+            <div class="tag flex gap-3 mt-6 border-b pb-5">
+              <p
+                class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+              >
+                #turbolife
+              </p>
+              <p
+                class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+              >
+                #audi
+              </p>
+              <p
+                class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+              >
+                #kenblock
+              </p>
+            </div>
+
+            <div class="action flex justify-between mt-5">
+              <div class="reactions flex gap-2 items-center">
+                <div
+                  class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                >
+                  <i class="fa-regular fa-heart"></i
+                  ><span class="px-1">234</span>
+                </div>
+                <div
+                  class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                >
+                  <i class="fa-regular fa-comment"></i
+                  ><span class="px-1">50</span>
+                </div>
+                <div
+                  class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                >
+                  <i class="fa-regular fa-thumbs-up"></i
+                  ><span class="px-1">700</span>
+                </div>
+              </div>
+              <div class="actions flex gap-4 items-center hover:cursor-pointer">
+                <i
+                  class="fa-solid fa-share-nodes hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                ></i>
+                <i
+                  class="fa-solid fa-bookmark hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <!-- forst post ending -->
+          <!-- //////////////////////// -->
+
+          <!-- second post start -->
+          <div
+            class="features-card px-5 py-4 bg-black/50 text-white rounded-xl hover:shadow-[0_0_10px_2px_white] transition-shadow duration-300 group"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex gap-1 items-center">
+                <i class="fa-solid p-3 bg-white text-red-600/80 rounded-3xl"
+                  >AT</i
+                >
+                <a href="profile.html">
+                  <div class="py-0">
+                    <p class="font-bold text-l capitalize">Agba turner</p>
+                    <p class="text-xs mt-1">@agbaturner</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="flex flex-col items-end">
+                <p class="bg-gray-700 px-2 py-1 rounded-xl text-sm">
+                  Audi Quattro
+                </p>
+                <p class="mt-1 mr-2 text-xs font-bold">2h ago</p>
+              </div>
+            </div>
+            <p class="text-lg mt-5">
+              Just started out with my new project buld on the audi quataro,
+              hopefully i can complete it before the year runs our, lets enjoy
+              the ride together<i
+                class="fa-solid fa-fire ml-2 text-yellow-500"
+              ></i>
+            </p>
+            <a href="#">
+              <img src="/img/audi.jpeg" alt="" class="mt-8 rounded-xl"
+            /></a>
+            <div class="tag flex gap-3 mt-6 border-b pb-5">
+              <p
+                class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+              >
+                #turbolife
+              </p>
+              <p
+                class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+              >
+                #audi
+              </p>
+              <p
+                class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+              >
+                #kenblock
+              </p>
+            </div>
+
+            <div class="action flex justify-between mt-5">
+              <div class="reactions flex gap-2 items-center">
+                <div
+                  class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                >
+                  <i class="fa-regular fa-heart"></i
+                  ><span class="px-1">234</span>
+                </div>
+                <div
+                  class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                >
+                  <i class="fa-regular fa-comment"></i
+                  ><span class="px-1">50</span>
+                </div>
+                <div
+                  class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                >
+                  <i class="fa-regular fa-thumbs-up"></i
+                  ><span class="px-1">700</span>
+                </div>
+              </div>
+              <div class="actions flex gap-4 items-center hover:cursor-pointer">
+                <i
+                  class="fa-solid fa-share-nodes hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                ></i>
+                <i
+                  class="fa-solid fa-bookmark hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                ></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second post end  -->
+          <!-- Post 3 -->
+
+          <div
+            class="features-card px-5 py-4 bg-black/50 text-white rounded-xl hover:shadow-[0_0_10px_2px_white] transition-shadow duration-300 group"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex gap-1 items-center">
+                <i class="fa-solid p-3 bg-white text-red-600/80 rounded-3xl"
+                  >AT</i
+                >
+                <a href="profile.html">
+                  <div class="py-0">
+                    <p class="font-bold text-l capitalize">Agba turner</p>
+                    <p class="text-xs mt-1">@agbaturner</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="flex flex-col items-end">
+                <p class="bg-gray-700 px-2 py-1 rounded-xl text-sm">
+                  Audi Quattro
+                </p>
+                <p class="mt-1 mr-2 text-xs font-bold">2h ago</p>
+              </div>
+            </div>
+            <p class="text-lg mt-5">
+              Just started out with my new project buld on the audi quataro,
+              hopefully i can complete it before the year runs our, lets enjoy
+              the ride together<i
+                class="fa-solid fa-fire ml-2 text-yellow-500"
+              ></i>
+            </p>
+            <a href="#">
+              <img src="/img/audi.jpeg" alt="" class="mt-8 rounded-xl"
+            /></a>
+            <div class="tag flex gap-3 mt-6 border-b pb-5">
+              <p
+                class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+              >
+                #turbolife
+              </p>
+              <p
+                class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+              >
+                #audi
+              </p>
+              <p
+                class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+              >
+                #kenblock
+              </p>
+            </div>
+
+            <div class="action flex justify-between mt-5">
+              <div class="reactions flex gap-2 items-center">
+                <div
+                  class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                >
+                  <i class="fa-regular fa-heart"></i
+                  ><span class="px-1">234</span>
+                </div>
+                <div
+                  class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                >
+                  <i class="fa-regular fa-comment"></i
+                  ><span class="px-1">50</span>
+                </div>
+                <div
+                  class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                >
+                  <i class="fa-regular fa-thumbs-up"></i
+                  ><span class="px-1">700</span>
+                </div>
+              </div>
+              <div class="actions flex gap-4 items-center hover:cursor-pointer">
+                <i
+                  class="fa-solid fa-share-nodes hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                ></i>
+                <i
+                  class="fa-solid fa-bookmark hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <!-- Post 4 -->
+
+          <div
+            class="features-card px-5 py-4 bg-black/50 text-white rounded-xl hover:shadow-[0_0_10px_2px_white] transition-shadow duration-300 group"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex gap-1 items-center">
+                <i class="fa-solid p-3 bg-white text-red-600/80 rounded-3xl"
+                  >AT</i
+                >
+                <a href="profile.html">
+                  <div class="py-0">
+                    <p class="font-bold text-l capitalize">Agba turner</p>
+                    <p class="text-xs mt-1">@agbaturner</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="flex flex-col items-end">
+                <p class="bg-gray-700 px-2 py-1 rounded-xl text-sm">
+                  Audi Quattro
+                </p>
+                <p class="mt-1 mr-2 text-xs font-bold">2h ago</p>
+              </div>
+            </div>
+            <p class="text-lg mt-5">
+              Just started out with my new project buld on the audi quataro,
+              hopefully i can complete it before the year runs our, lets enjoy
+              the ride together<i
+                class="fa-solid fa-fire ml-2 text-yellow-500"
+              ></i>
+            </p>
+            <a href="#">
+              <img src="/img/audi.jpeg" alt="" class="mt-8 rounded-xl"
+            /></a>
+            <div class="tag flex gap-3 mt-6 border-b pb-5">
+              <p
+                class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+              >
+                #turbolife
+              </p>
+              <p
+                class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+              >
+                #audi
+              </p>
+              <p
+                class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+              >
+                #kenblock
+              </p>
+            </div>
+
+            <div class="action flex justify-between mt-5">
+              <div class="reactions flex gap-2 items-center">
+                <div
+                  class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                >
+                  <i class="fa-regular fa-heart"></i
+                  ><span class="px-1">234</span>
+                </div>
+                <div
+                  class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                >
+                  <i class="fa-regular fa-comment"></i
+                  ><span class="px-1">50</span>
+                </div>
+                <div
+                  class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                >
+                  <i class="fa-regular fa-thumbs-up"></i
+                  ><span class="px-1">700</span>
+                </div>
+              </div>
+              <div class="actions flex gap-4 items-center hover:cursor-pointer">
+                <i
+                  class="fa-solid fa-share-nodes hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                ></i>
+                <i
+                  class="fa-solid fa-bookmark hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <!-- Post 5 -->
+
+          <div
+            class="features-card px-5 py-4 bg-black/50 text-white rounded-xl hover:shadow-[0_0_10px_2px_white] transition-shadow duration-300 group"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex gap-1 items-center">
+                <i class="fa-solid p-3 bg-white text-red-600/80 rounded-3xl"
+                  >AT</i
+                >
+                <a href="profile.html">
+                  <div class="py-0">
+                    <p class="font-bold text-l capitalize">Agba turner</p>
+                    <p class="text-xs mt-1">@agbaturner</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="flex flex-col items-end">
+                <p class="bg-gray-700 px-2 py-1 rounded-xl text-sm">
+                  Audi Quattro
+                </p>
+                <p class="mt-1 mr-2 text-xs font-bold">2h ago</p>
+              </div>
+            </div>
+            <p class="text-lg mt-5">
+              Just started out with my new project buld on the audi quataro,
+              hopefully i can complete it before the year runs our, lets enjoy
+              the ride together<i
+                class="fa-solid fa-fire ml-2 text-yellow-500"
+              ></i>
+            </p>
+            <a href="#">
+              <img src="/img/audi.jpeg" alt="" class="mt-8 rounded-xl"
+            /></a>
+            <div class="tag flex gap-3 mt-6 border-b pb-5">
+              <p
+                class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+              >
+                #turbolife
+              </p>
+              <p
+                class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+              >
+                #audi
+              </p>
+              <p
+                class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+              >
+                #kenblock
+              </p>
+            </div>
+
+            <div class="action flex justify-between mt-5">
+              <div class="reactions flex gap-2 items-center">
+                <div
+                  class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                >
+                  <i class="fa-regular fa-heart"></i
+                  ><span class="px-1">234</span>
+                </div>
+                <div
+                  class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                >
+                  <i class="fa-regular fa-comment"></i
+                  ><span class="px-1">50</span>
+                </div>
+                <div
+                  class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                >
+                  <i class="fa-regular fa-thumbs-up"></i
+                  ><span class="px-1">700</span>
+                </div>
+              </div>
+              <div class="actions flex gap-4 items-center hover:cursor-pointer">
+                <i
+                  class="fa-solid fa-share-nodes hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                ></i>
+                <i
+                  class="fa-solid fa-bookmark hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <!-- Post 6 -->
+
+          <div
+            class="features-card px-5 py-4 bg-black/50 text-white rounded-xl hover:shadow-[0_0_10px_2px_white] transition-shadow duration-300 group"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex gap-1 items-center">
+                <i class="fa-solid p-3 bg-white text-red-600/80 rounded-3xl"
+                  >AT</i
+                >
+                <a href="profile.html">
+                  <div class="py-0">
+                    <p class="font-bold text-l capitalize">Agba turner</p>
+                    <p class="text-xs mt-1">@agbaturner</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="flex flex-col items-end">
+                <p class="bg-gray-700 px-2 py-1 rounded-xl text-sm">
+                  Audi Quattro
+                </p>
+                <p class="mt-1 mr-2 text-xs font-bold">2h ago</p>
+              </div>
+            </div>
+            <p class="text-lg mt-5">
+              Just started out with my new project buld on the audi quataro,
+              hopefully i can complete it before the year runs our, lets enjoy
+              the ride together<i
+                class="fa-solid fa-fire ml-2 text-yellow-500"
+              ></i>
+            </p>
+            <a href="#">
+              <img src="/img/audi.jpeg" alt="" class="mt-8 rounded-xl"
+            /></a>
+            <div class="tag flex gap-3 mt-6 border-b pb-5">
+              <p
+                class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+              >
+                #turbolife
+              </p>
+              <p
+                class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+              >
+                #audi
+              </p>
+              <p
+                class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+              >
+                #kenblock
+              </p>
+            </div>
+
+            <div class="action flex justify-between mt-5">
+              <div class="reactions flex gap-2 items-center">
+                <div
+                  class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                >
+                  <i class="fa-regular fa-heart"></i
+                  ><span class="px-1">234</span>
+                </div>
+                <div
+                  class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                >
+                  <i class="fa-regular fa-comment"></i
+                  ><span class="px-1">50</span>
+                </div>
+                <div
+                  class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                >
+                  <i class="fa-regular fa-thumbs-up"></i
+                  ><span class="px-1">700</span>
+                </div>
+              </div>
+              <div class="actions flex gap-4 items-center hover:cursor-pointer">
+                <i
+                  class="fa-solid fa-share-nodes hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                ></i>
+                <i
+                  class="fa-solid fa-bookmark hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <!-- Post 7 -->
+
+          <div
+            class="features-card px-5 py-4 bg-black/50 text-white rounded-xl hover:shadow-[0_0_10px_2px_white] transition-shadow duration-300 group"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex gap-1 items-center">
+                <i class="fa-solid p-3 bg-white text-red-600/80 rounded-3xl"
+                  >AT</i
+                >
+                <a href="profile.html">
+                  <div class="py-0">
+                    <p class="font-bold text-l capitalize">Agba turner</p>
+                    <p class="text-xs mt-1">@agbaturner</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="flex flex-col items-end">
+                <p class="bg-gray-700 px-2 py-1 rounded-xl text-sm">
+                  Audi Quattro
+                </p>
+                <p class="mt-1 mr-2 text-xs font-bold">2h ago</p>
+              </div>
+            </div>
+            <p class="text-lg mt-5">
+              Just started out with my new project buld on the audi quataro,
+              hopefully i can complete it before the year runs our, lets enjoy
+              the ride together<i
+                class="fa-solid fa-fire ml-2 text-yellow-500"
+              ></i>
+            </p>
+            <a href="#">
+              <img src="/img/audi.jpeg" alt="" class="mt-8 rounded-xl"
+            /></a>
+            <div class="tag flex gap-3 mt-6 border-b pb-5">
+              <p
+                class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+              >
+                #turbolife
+              </p>
+              <p
+                class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+              >
+                #audi
+              </p>
+              <p
+                class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+              >
+                #kenblock
+              </p>
+            </div>
+
+            <div class="action flex justify-between mt-5">
+              <div class="reactions flex gap-2 items-center">
+                <div
+                  class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                >
+                  <i class="fa-regular fa-heart"></i
+                  ><span class="px-1">234</span>
+                </div>
+                <div
+                  class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                >
+                  <i class="fa-regular fa-comment"></i
+                  ><span class="px-1">50</span>
+                </div>
+                <div
+                  class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                >
+                  <i class="fa-regular fa-thumbs-up"></i
+                  ><span class="px-1">700</span>
+                </div>
+              </div>
+              <div class="actions flex gap-4 items-center hover:cursor-pointer">
+                <i
+                  class="fa-solid fa-share-nodes hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                ></i>
+                <i
+                  class="fa-solid fa-bookmark hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <!-- Post 8 -->
+
+          <div
+            class="features-card px-5 py-4 bg-black/50 text-white rounded-xl hover:shadow-[0_0_10px_2px_white] transition-shadow duration-300 group"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex gap-1 items-center">
+                <i class="fa-solid p-3 bg-white text-red-600/80 rounded-3xl"
+                  >AT</i
+                >
+                <a href="profile.html">
+                  <div class="py-0">
+                    <p class="font-bold text-l capitalize">Agba turner</p>
+                    <p class="text-xs mt-1">@agbaturner</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="flex flex-col items-end">
+                <p class="bg-gray-700 px-2 py-1 rounded-xl text-sm">
+                  Audi Quattro
+                </p>
+                <p class="mt-1 mr-2 text-xs font-bold">2h ago</p>
+              </div>
+            </div>
+            <p class="text-lg mt-5">
+              Just started out with my new project buld on the audi quataro,
+              hopefully i can complete it before the year runs our, lets enjoy
+              the ride together<i
+                class="fa-solid fa-fire ml-2 text-yellow-500"
+              ></i>
+            </p>
+            <a href="#">
+              <img src="/img/audi.jpeg" alt="" class="mt-8 rounded-xl"
+            /></a>
+            <div class="tag flex gap-3 mt-6 border-b pb-5">
+              <p
+                class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+              >
+                #turbolife
+              </p>
+              <p
+                class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+              >
+                #audi
+              </p>
+              <p
+                class="bg-neutral-800 rounded-xl px-2 capitalize font-semibold"
+              >
+                #kenblock
+              </p>
+            </div>
+
+            <div class="action flex justify-between mt-5">
+              <div class="reactions flex gap-2 items-center">
+                <div
+                  class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                >
+                  <i class="fa-regular fa-heart"></i
+                  ><span class="px-1">234</span>
+                </div>
+                <div
+                  class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                >
+                  <i class="fa-regular fa-comment"></i
+                  ><span class="px-1">50</span>
+                </div>
+                <div
+                  class="hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                >
+                  <i class="fa-regular fa-thumbs-up"></i
+                  ><span class="px-1">700</span>
+                </div>
+              </div>
+              <div class="actions flex gap-4 items-center hover:cursor-pointer">
+                <i
+                  class="fa-solid fa-share-nodes hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                ></i>
+                <i
+                  class="fa-solid fa-bookmark hover:text-blue-800 hover:bg-neutral-500 p-3 hover:rounded-xl transition-all duration-100 hover:translate-x-2"
+                ></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- post card end-->
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-black/80 text-white p-8 iteems-center">
+      <h4 class="text-4xl font-bold capitalize mb-4 text-center">
+        Ready to join the culture?
+      </h4>
+      <p class="text-neutral-400 text-center">
+        Connect with thousands of car enthusiasts, showcase your builds, and
+        discover the latest in automotive culture.
+      </p>
+      <div class="grid grid-cols-1 gap-6 mt-8 text-xl">
+        <p
+          class="bg-orange-700 w-full text-center p-4 rounded-2xl hover:scale-110 transform transition duration-300 ease-in"
+        >
+          Join the commnunity
+        </p>
+        <p
+          class="bg-neutral-800 w-full text-center p-4 rounded-2xl border-1 border-neutral-700"
+        >
+          Explore features
+        </p>
+      </div>
+      <div
+        class="socials flex justify-center mt-4 gap-4 text-blue-800 text-2xl"
+      >
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-facebook"></i>
+      </div>
+    </footer>
+  </body>
+</html>

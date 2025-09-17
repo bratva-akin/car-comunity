@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="w-full max-w-3xl mx-auto">
+      <!-- Cover Photo -->
+      <div class="relative w-full h-48 md:h-64">
+        <div class="absolute">
+          <a href="community.html"
+            ><i
+              class="fa-solid fa-arrow-left p-2 fa-2x text-white cursor-pointer -top-16"
+            ></i
+          ></a>
+        </div>
+        <img
+          src="/img/cover.jpg"
+          alt="cover"
+          class="w-full h-full object-cover shadow"
+        />
+        <!-- Profile Pic -->
+        <div class="absolute -bottom-16 left-6">
+          <img
+            src="/img/LL.png"
+            alt="profile"
+            class="w-28 h-28 rounded-full border-4 border-white shadow-xl"
+          />
+        </div>
+      </div>
+
+      <!-- User Info -->
+      <div class="mt-16 px-6">
+        <h2 class="text-2xl font-bold">Adewale Bashir</h2>
+        <p class="text-gray-600">@agbaturner</p>
+        <p class="text-gray-600">Short bio or description goes here.</p>
+        <button
+          class="mt-3 mr-5 px-4 py-2 bg-blue-500 text-white rounded-xl shadow hover:bg-blue-600"
+        >
+          Follow
+        </button>
+        <button
+          class="mt-3 px-4 py-2 bg-blue-500 text-white rounded-xl shadow hover:bg-blue-600"
+        >
+          Add as Friend<i class="fa-solid fa-user ml-2 text-white"></i>
+        </button>
+      </div>
+
+      <!-- User Posts -->
+      <div class="mt-8 grid gap-6">
+        <div class="rounded-2xl shadow bg-white p-4">
+          <p class="mb-3 text-gray-800">Just launched my new project 🚀</p>
+          <img
+            src="img/audi.jpeg"
+            alt="post"
+            class="w-full rounded-xl object-cover"
+          />
+        </div>
+
+        <div class="rounded-2xl shadow bg-white p-4">
+          <p class="mb-3 text-gray-800">Beautiful day at the beach 🌊</p>
+          <img
+            src="img/cover.jpg"
+            alt="post"
+            class="w-full rounded-xl object-cover"
+          />
+        </div>
+
+        <div class="rounded-2xl shadow bg-white p-4">
+          <p class="mb-3 text-gray-800">Exploring the city lights ✨</p>
+          <img
+            src="img/drift1.jpg"
+            alt="post"
+            class="w-full rounded-xl object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>Abuja Car culture</title>
+  </head>
+  <body>
+    <header>
+      <nav class="p-3 bg-gray-950 md:flex md:items-center md:justify-between">
+        <div class="flex justify-between items-center">
+          <span class="cursor-pointer"
+            ><img src="/img/LL.png" class="w-30 h-15" alt="" />
+          </span>
+          <span class="text-3xl md:hidden text-neutral-100 cursor-pointer">
+            <i
+              class="fa-solid fa-bars text-3xl md:hidden text-neutral-100 cursor-pointer mb-4"
+              onclick="sidebar(this)"
+            ></i>
+            <!-- <i
+              class="fa-solid fa-bars mb-4"
+              name="menu-outline"
+              onclick="sidebar(this)"
+            ></i> -->
+          </span>
+        </div>
+
+        <ul
+          class="md:flex text-white md:items-center md:gap-1 z-999 md:z-auto md:static absolute w-full right-0 md:w-auto md:opacity-100 opacity-10 top-[-400px] transition-all-ease-in duration-600 md:py-0 py-4 md:pl-0 pl-7 backdrop-blur text-center"
+        >
+          <!-- class="md:flex md:items-center md:gap-2 z-20 md:static absolute w-full
+          left-0 md:w-auto md:opacity-100 opacity-100 top-0 transition-all
+          ease-in duration-600 md:py-0 py-4 md:pl-0 pl-7 bg-white/80
+          backdrop-blur-md shadow-md text-center" -->
+
+          <li class="mx-2 my-4 md:my-0">
+            <a
+              href="index.html"
+              class="text-xl hover:text-neutral-100 hover:bg-yellow-200/60 px-3 py-2 rounded-xl duration-100 focus:bg-yellow-200"
+              >Home</a
+            >
+          </li>
+          <li class="mx-4 my-4 md:my-0">
+            <a
+              href="event.html"
+              class="text-xl hover:text-neutral-400 hover:bg-yellow-200/60 px-3 py-2 rounded-xl duration-100 active:bg-red-200"
+              >Events</a
+            >
+          </li>
+          <li class="mx-4 my-4 md:my-0">
+            <a
+              href="community.html"
+              class="text-xl hover:text-neutral-400 hover:bg-yellow-200/60 px-3 py-2 rounded-xl duration-100 active:bg-yellow-200"
+              >Forum</a
+            >
+          </li>
+          <li class="mx-4 my-4 md:my-0">
+            <a
+              href="marketplace.html"
+              class="text-xl hover:text-neutral-400 hover:bg-yellow-200/60 px-3 py-2 rounded-xl duration-100 active:bg-yellow-200"
+              >Marketplace</a
+            >
+          </li>
+          <li class="mx-4 my-4 md:my-0">
+            <a
+              href="about.html"
+              class="text-xl hover:text-neutral-400 hover:bg-yellow-200/60 px-3 py-2 rounded-xl duration-100 active:bg-yellow-200"
+              >About</a
+            >
+          </li>
+          <li class="mx-4 my-4 md:my-0">
+            <a
+              href="faq.html"
+              class="text-xl hover:text-neutral-400 hover:bg-yellow-200/60 px-3 py-2 rounded-xl duration-100 active:bg-yellow-200"
+              >FAQ</a
+            >
+          </li>
+
+          <button
+            class="bg-yellow-400 duration-500 px-5 py-2 rounded-xl font-bold m-2 active:bg-yellow-200"
+          >
+            Join Us
+          </button>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="faq p-5">
+      <div class="faq">
+        <h2 class="text-2xl font-bold text-center mb-6">
+          Frequently Asked Question (FAQ)
+        </h2>
+
+        <div class="py-1 mb-3 leading-7">
+          <p class="font-semibold text-lg mb-1">
+            Q: Who can join the Abuja Car Community?
+          </p>
+          <span
+            >A: Anyone with a love for cars is welcome! You don’t need to own a
+            fancy ride – passion is what drives us.</span
+          >
+        </div>
+        <div class="py-1 mb-3 leading-7">
+          <p class="font-semibold text-lg">
+            Q: Do you organize car meets and events?
+          </p>
+          <span
+            >A: Yes! We host regular meetups, car shows, cruises, and charity
+            drives across Abuja. Members are always notified ahead of
+            time.</span
+          >
+        </div>
+
+        <div class="py-1 mb-3 leading-7">
+          <p class="font-semibold text-lg">Q: Is there a membership fee?</p>
+          <span
+            >A: Basic membership is free. However, some premium events or
+            services may require a small contribution to cover logistics.</span
+          >
+        </div>
+
+        <div class="py-1 mb-3 leading-7">
+          <p class="font-semibold text-lg">
+            Q: Can I promote my auto-related business in the community?
+          </p>
+          <span
+            >A: Yes. We encourage local businesses (mechanics, detailers,
+            dealerships, etc.) to collaborate. Reach out to our admin team for
+            partnership opportunities.</span
+          >
+        </div>
+
+        <div class="py-1 mb-3 leading-7">
+          <p class="font-semibold text-lg">
+            Q: Do I need to live in Abuja to be part of the community?
+          </p>
+          <span
+            >A: While most of our physical events are in Abuja, car enthusiasts
+            from other cities are welcome to join our online discussions and
+            activities.</span
+          >
+        </div>
+
+        <div class="py-1 mb-3 leading-7">
+          <p class="font-semibold text-lg">Q: How do I stay updated?</p>
+
+          <span
+            >A: Follow us on social media, join our WhatsApp/Telegram group, or
+            sign up for our newsletter to never miss an update.</span
+          >
+        </div>
+
+        <div class="py-1 mb-3 leading-7">
+          <p class="font-semibold text-lg">Q: Do I need a fancy car to join?</p>
+          <span>A: Nope! If you love cars, you’re in. Simple as that.</span>
+        </div>
+
+        <div class="py-1 mb-3 leading-7">
+          <p class="font-semibold text-lg">Q: When do you guys meet?</p>
+          <span
+            >A: We host regular meetups and cruises. Dates drop in the group
+            chat and socials – stay plugged in.</span
+          >
+        </div>
+
+        <div class="py-1 mb-3 leading-7">
+          <p class="font-semibold text-lg">Q: Is it free to join?</p>
+          <span
+            >A: 100% free to vibe with us. Some special events might have a
+            small fee for logistics, but nothing crazy.</span
+          >
+        </div>
+
+        <div class="py-1 mb-3leading-7">
+          <p class="font-semibold text-lg">
+            Q: Can I pull up if I’m not from Abuja?
+          </p>
+          <span
+            >A: Of course! If you’re in town, come through. Our online community
+            is open to everyone.</span
+          >
+        </div>
+
+        <div class="py-1 mb-3 leading-7">
+          <p class="font-semibold text-lg">
+            Q: I run an auto business. Can I link up?
+          </p>
+          <span
+            >A: Yes! We love supporting local garages, detailers, and
+            businesses. Just hit the admins and we’ll work something out.</span
+          >
+        </div>
+
+        <div class="py-1 mb-3leading-7">
+          <p class="font-semibold text-lg">Q: How do I stay updated?</p>
+          <span
+            >A: Easy – follow us on Instagram, join the Community forum/Telegram group,
+            and watch out for event flyers.</span
+          >
+        </div>
+    </section>
+    <footer class="bg-black/80 text-white p-8 iteems-center">
+      <h4 class="text-4xl font-bold capitalize mb-4 text-center">
+        Ready to join the culture?
+      </h4>
+      <p class="text-neutral-400 text-center">
+        Connect with thousands of car enthusiasts, showcase your builds, and
+        discover the latest in automotive culture.
+      </p>
+      <div class="grid grid-cols-1 gap-6 mt-8 text-xl">
+        <p
+          class="bg-orange-700 w-full text-center p-4 rounded-2xl hover:scale-110 transform transition duration-300 ease-in"
+        >
+          Join the commnunity
+        </p>
+        <p
+          class="bg-neutral-800 w-full text-center p-4 rounded-2xl border-1 border-neutral-700"
+        >
+          Explore features
+        </p>
+      </div>
+      <div
+        class="socials flex justify-center mt-4 gap-4 text-blue-800 text-2xl"
+      >
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-facebook"></i>
+      </div>
+    </footer>
+  </body>
+</html>
